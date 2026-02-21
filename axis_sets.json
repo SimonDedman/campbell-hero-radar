@@ -1,0 +1,58 @@
+{
+  "vogler_12": {
+    "label": "Vogler 12-Stage (Film Standard)",
+    "axes": [
+      {"id": "ordinary_world", "label": "Ordinary World"},
+      {"id": "call_to_adventure", "label": "Call to Adventure"},
+      {"id": "refusal", "label": "Refusal of the Call"},
+      {"id": "mentor", "label": "Meeting the Mentor"},
+      {"id": "threshold", "label": "Crossing the Threshold"},
+      {"id": "tests_allies_enemies", "label": "Tests, Allies & Enemies"},
+      {"id": "inmost_cave", "label": "Approach to Inmost Cave"},
+      {"id": "ordeal", "label": "The Ordeal"},
+      {"id": "reward", "label": "Reward / Seizing the Sword"},
+      {"id": "road_back", "label": "The Road Back"},
+      {"id": "resurrection", "label": "Resurrection"},
+      {"id": "return_elixir", "label": "Return with the Elixir"}
+    ]
+  },
+  "campbell_17": {
+    "label": "Campbell 17-Stage (Academic)",
+    "axes": [
+      {"id": "ordinary_world", "label": "Ordinary World"},
+      {"id": "call_to_adventure", "label": "Call to Adventure"},
+      {"id": "refusal", "label": "Refusal of the Call"},
+      {"id": "supernatural_aid", "label": "Supernatural Aid"},
+      {"id": "threshold_crossing", "label": "Crossing First Threshold"},
+      {"id": "belly_whale", "label": "Belly of the Whale"},
+      {"id": "road_trials", "label": "Road of Trials"},
+      {"id": "goddess", "label": "Meeting with the Goddess"},
+      {"id": "temptress", "label": "Woman as Temptress"},
+      {"id": "atonement_father", "label": "Atonement with the Father"},
+      {"id": "apotheosis", "label": "Apotheosis"},
+      {"id": "ultimate_boon", "label": "The Ultimate Boon"},
+      {"id": "refusal_return", "label": "Refusal of the Return"},
+      {"id": "magic_flight", "label": "The Magic Flight"},
+      {"id": "rescue_without", "label": "Rescue from Without"},
+      {"id": "return_threshold", "label": "Return Threshold Crossing"},
+      {"id": "master_two_worlds", "label": "Master of Two Worlds"}
+    ]
+  },
+  "mixed_archetype": {
+    "label": "Mixed: 8 Stages + 4 Character Archetypes",
+    "axes": [
+      {"id": "departure_depth", "label": "Departure Depth"},
+      {"id": "threshold_crossing", "label": "Threshold Crossing"},
+      {"id": "trials_intensity", "label": "Trials Intensity"},
+      {"id": "descent_transformation", "label": "Descent & Transformation"},
+      {"id": "climax_ordeal", "label": "Climactic Ordeal"},
+      {"id": "return_changed", "label": "Return (Transformed)"},
+      {"id": "gift_to_world", "label": "Gift/Boon to World"},
+      {"id": "psychological_death_rebirth", "label": "Psych. Death & Rebirth"},
+      {"id": "arch_mentor", "label": "Mentor Archetype Strength"},
+      {"id": "arch_shadow", "label": "Shadow Archetype Strength"},
+      {"id": "arch_shapeshifter", "label": "Shapeshifter Archetype"},
+      {"id": "arch_trickster", "label": "Trickster Archetype"}
+    ]
+  }
+}
