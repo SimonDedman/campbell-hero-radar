@@ -1,4 +1,6 @@
-# 🗡️ Campbell Hero Radar — Monomyth Film Analysis
+# Campbell Hero Radar — Monomyth Film Analysis
+
+**[Live App](https://simondedman.shinyapps.io/campbell-hero-radar/)**
 
 Shiny app + analysis pipeline scoring films against Joseph Campbell's **Hero's Journey / Monomyth**, with PCA and hierarchical clustering to reveal structural archetypes across cinema.
 
@@ -6,16 +8,17 @@ Shiny app + analysis pipeline scoring films against Joseph Campbell's **Hero's J
 
 ```
 campbell-hero-radar/
-├── app.R                        # Shiny app (3-tab: compare / single film / AI score)
+├── app.R                        # Shiny app (5-tab: single / compare / cluster / analytics / score)
 ├── batch_score_claudecode.R     # Batch scorer via claude CLI (Max sub, free)
 ├── batch_score_films.R          # Batch scorer via Anthropic API (paid, ~$0.007/film)
-├── analyse_clusters.R           # PCA + clustering + heatmap analysis
+├── analyse_clusters.R           # PCA + clustering + heatmap analysis (static plots)
 ├── install_deps.R               # One-shot package installer
 ├── setup_github.sh              # Git init + GitHub push script
 ├── data/
-│   ├── films.json               # Film database (pre-scored + AI-scored)
+│   ├── films.json               # Film database (84+ scored films)
 │   ├── axis_sets.json           # 3 axis set definitions
-│   └── scoring_queue.txt        # Films to batch-score (edit this)
+│   ├── scoring_queue.txt        # Original 81-film queue
+│   └── scoring_queue_v2.txt     # Expanded 607-film queue (Oscar + genre)
 └── plots/                       # Output dir for analyse_clusters.R
 ```
 
@@ -37,10 +40,10 @@ cd campbell-hero-radar
 # 2. Install R packages
 Rscript install_deps.R
 
-# 3. Launch Shiny app (uses 10 pre-scored films)
+# 3. Launch Shiny app
 Rscript -e "shiny::runApp('.')"
 
-# 4. Score more films (edit data/scoring_queue.txt first)
+# 4. Score more films (edit data/scoring_queue_v2.txt or add your own)
 #    Via Claude Code / Max subscription (FREE):
 Rscript batch_score_claudecode.R
 
@@ -98,7 +101,7 @@ Rscript analyse_clusters.R --axis vogler_12    # one axis set only
 
 ## Adding Films
 
-Edit `data/scoring_queue.txt` — one film per line as `Title (Year)`, then run batch scorer.
+Edit `data/scoring_queue_v2.txt` — one film per line as `Title (Year)`, then run batch scorer. Already-scored films are skipped automatically.
 
 ## Scoring Scale
 
