@@ -26,7 +26,7 @@ QUEUE_ONLY  <- if ("--only" %in% args) as.integer(args[which(args == "--only") +
 DATA_DIR    <- "data"
 FILMS_FILE  <- file.path(DATA_DIR, "films.json")
 AXES_FILE   <- file.path(DATA_DIR, "axis_sets.json")
-QUEUE_FILE  <- file.path(DATA_DIR, "scoring_queue.txt")
+QUEUE_FILE  <- file.path(DATA_DIR, "scoring_queue_v2.txt")
 LOG_FILE    <- "scoring_log.txt"
 
 BATCH_PAUSE <- 2   # seconds between claude CLI calls
@@ -101,8 +101,9 @@ Return ONLY valid JSON matching this exact structure, no markdown, no commentary
   writeLines(prompt, tmp_prompt)
 
   # Call claude CLI: --print for non-interactive, pipe stdin from file
+  # Unset CLAUDECODE env var to allow running from within a Claude Code session
   cmd <- sprintf(
-    'claude --print --model %s < "%s" > "%s" 2>&1',
+    'env -u CLAUDECODE claude --print --model %s < "%s" > "%s" 2>&1',
     model, tmp_prompt, tmp_out
   )
 

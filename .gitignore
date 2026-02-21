@@ -1,3 +1,5 @@
 .env
 scoring_log.txt
+scoring_run.log
 plots/
+rsconnect/
